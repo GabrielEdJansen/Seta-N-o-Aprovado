@@ -1263,6 +1263,9 @@ function _saveData(data, info) {
 
     newData.SupAproJusti = document.getElementById("SupAproJusti").value;
 
+    newData.AprovSup = "";
+    newData.AprovDir = "";
+
     console.log(newData);
     return {
         formData: newData,
