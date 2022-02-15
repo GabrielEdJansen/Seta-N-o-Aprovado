@@ -415,19 +415,19 @@ function removerLinhaTabela() {
 function selecionaTipoFormulario() {
     if (document.getElementById("selectTipFor").value == 'Adiantamento') {
 
-        let eVal = document.getElementById('PagNumNf');
+        let eVal = document.getElementById('PagDatPre');
 
         eVal.style.display = 'flex';
 
-        document.getElementById("NumNf").value = ''
+        document.getElementById("DatPre").value = ''
     }
     if (document.getElementById("selectTipFor").value == 'Pagamento') {
 
-        let eVal = document.getElementById('PagNumNf');
+        let eVal = document.getElementById('PagDatPre');
 
         eVal.style.display = 'none';
 
-        document.getElementById("NumNf").value = ''
+        document.getElementById("DatPre").value = ''
     }
 }
 
@@ -1358,7 +1358,7 @@ function isFormValid() {
 
     //Número da NF
     var isNullNumNf = document.getElementById("NumNf").value;
-    if ((isNullNumNf == '') && (document.getElementById("selectTipFor").value == 'Adiantamento')) {
+    if (isNullNumNf == '') {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
     } else {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
@@ -1367,7 +1367,7 @@ function isFormValid() {
 
     //Data Prevista Recebimento NF
     var isNullDatPre = document.getElementById("DatPre").value;
-    if (isNullDatPre == '') {
+    if ((isNullDatPre == '') && (document.getElementById("selectTipFor").value == 'Adiantamento')) {
         document.getElementById("DatPre").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
     } else {
         document.getElementById("DatPre").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
@@ -1876,9 +1876,9 @@ function isFormValid() {
     var TotalCampos = 0
     if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Deposito')) {
         if (document.getElementById("selectFormPag").value == 'Deposito') {
-            TotalCampos = 14
+            TotalCampos = 15
         } else {
-            TotalCampos = 12
+            TotalCampos = 13
         }
 
         TotalCampos = TotalCampos + 3
@@ -1921,7 +1921,7 @@ function isFormValid() {
 
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
-        TotalCampos = 11
+        TotalCampos = 12
 
         TotalCampos = TotalCampos + 4
 
