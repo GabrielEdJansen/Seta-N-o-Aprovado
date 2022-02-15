@@ -1921,7 +1921,7 @@ function isFormValid() {
 
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
-        TotalCampos = 12
+        TotalCampos = 11
 
         TotalCampos = TotalCampos + 4
 
