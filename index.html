@@ -220,33 +220,33 @@
         </td>
       </tr>
     </table>
-    <!-- Número da NF -->
-    <div class="row" id="PagNumNf" style="display: none;">
-      <div class="col-md-6">
-        <label for="NumNf" class="form-label">CNPJ do Tomador</label>
-        <input id="NumNf" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-          <script type="text/javascript">
-            $('#NumNf').mask('000.000.000-00', {
-              onKeyPress: function (NumNf, e, field, options) {
-                const masks = ['00.000.000/0000-00'];
-                const mask = (Cnpj.length > 14) ? masks[1] : masks[0];
-                $('#NumNf').mask(mask, options);
-              }
-            });
-          </script>
-        <div class="invalid-feedback">*Campo Obrigatório</div>
-      </div>
+   <!-- Número da NF -->
+   <div class="row" id="PagNumNf">
+    <div class="col-md-6">
+      <label for="NumNf" class="form-label">CNPJ do Tomador</label>
+      <input id="NumNf" type="text"
+        class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <script type="text/javascript">
+          $('#NumNf').mask('000.000.000-00', {
+            onKeyPress: function (NumNf, e, field, options) {
+              const masks = ['00.000.000/0000-00'];
+              const mask = (Cnpj.length > 14) ? masks[1] : masks[0];
+              $('#NumNf').mask(mask, options);
+            }
+          });
+        </script>
+      <div class="invalid-feedback">*Campo Obrigatório</div>
     </div>
-    <!-- Data Prevista Recebimento NF -->
-    <div class="row">
-      <div class="col-md-6">
-        <label for="DatPre" class="form-label">Data Prevista Recebimento NF</label>
-        <input id="DatPre" type="date"
-          class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
-        <div class="invalid-feedback">*Campo Obrigatório</div>
-      </div>
+  </div>
+  <!-- Data Prevista Recebimento NF -->
+  <div class="row" id="PagDatPre" style="display: none;">
+    <div class="col-md-6">
+      <label for="DatPre" class="form-label">Data Prevista Recebimento NF</label>
+      <input id="DatPre" type="date"
+        class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+      <div class="invalid-feedback">*Campo Obrigatório</div>
     </div>
+  </div>
     <!-- Observação -->
     <div class="row">
       <div class="col-md-12">
