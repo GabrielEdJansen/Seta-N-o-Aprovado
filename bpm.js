@@ -1263,6 +1263,7 @@ function _init(data, info) {
 
 
             exibirParcelasComValorInformado()
+            ExibirFormaPagamento()
         }
     });
 }
