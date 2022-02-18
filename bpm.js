@@ -1372,6 +1372,14 @@ function _saveData(data, info) {
     newData.AprovSup = " ";
     newData.AprovDir = " ";
 
+    let CheckInserirChavePix = document.querySelector('#CheckInserirChavePix').checked
+
+    if (CheckInserirChavePix == true) {
+        newData.inserirChaPix = "S";
+    }else{
+        newData.inserirChaPix = "N";
+    }
+
     console.log(newData);
     return {
         formData: newData,
