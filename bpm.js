@@ -1453,6 +1453,7 @@ function _saveData(data, info) {
     newData.AprovDir = " ";
 
     let CheckInserirChavePix = document.querySelector('#CheckInserirChavePix').checked
+    newData.integraTitulo = "";
 
     if (CheckInserirChavePix == true) {
         newData.inserirChaPix = "S";
