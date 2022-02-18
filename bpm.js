@@ -527,7 +527,6 @@ function selecionaTipoFormulario() {
 
         eVal.style.display = 'flex';
 
-        document.getElementById("DatPre").value = ''
     }
     if (document.getElementById("selectTipFor").value == 'Pagamento') {
 
@@ -1264,6 +1263,9 @@ function _init(data, info) {
 
             exibirParcelasComValorInformado()
             ExibirFormaPagamento()
+            preencheCnpjEmp()
+            selecionaTipoFormulario()
+
         }
     });
 }
