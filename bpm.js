@@ -2101,7 +2101,7 @@ function isFormValid() {
     var TotalCampos = 0
     if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Deposito')) {
         if (document.getElementById("selectFormPag").value == 'Deposito') {
-            TotalCampos = 15
+            TotalCampos = 16
         } else {
             TotalCampos = 13
         }
