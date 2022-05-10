@@ -1648,7 +1648,7 @@ function isFormValid() {
         document.getElementById("CodBolOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
         document.getElementById("CodBolDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
 
-        var isNullForPagBanco = document.getElementById("ForPagBanco").value;
+       /* var isNullForPagBanco = document.getElementById("ForPagBanco").value;
         if (isNullForPagBanco == '') {
             document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
         } else {
@@ -1679,7 +1679,7 @@ function isFormValid() {
         if ((isNullFormPagTipTcc != '') && (isNullFormPagTipTcc != 'Selecione o Tipo de Conta')) {
             document.getElementById("FormPagTipTcc").setAttribute("class", "form-select is-valid");
             retornaResultado++
-        }
+        }*/
     }
 
     if (document.getElementById("selectFormPag").value == 'Boleto') {
@@ -2101,7 +2101,7 @@ function isFormValid() {
     var TotalCampos = 0
     if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Deposito')) {
         if (document.getElementById("selectFormPag").value == 'Deposito') {
-            TotalCampos = 16
+            TotalCampos = 12
         } else {
             TotalCampos = 13
         }
